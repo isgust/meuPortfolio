@@ -1,14 +1,23 @@
-<!-- No arquivo pagina_inicial.html -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gustavo Rocha</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    <h1>Bem-vindo à minha página inicial</h1>
-    <!-- Aqui você pode adicionar conteúdo adicional da página inicial -->
+  <div>
+  <img src="" alt="">
+  <h3>Gustavo Rocha</h3>
+  </div>
+  <section>
+  <button class="button pl-4"><a href="{% url 'index' %}">Home</a></button>
+  <button class="button"><a href="{% url 'projetos' %}">Projetos</a></button>
+  <button class="button"><a href="{% url 'contato'%}">Contato</a></button>
+  <footer class="footer">©Gustavo Rocha - 2024</footer>
+  </section>
 </body>
 </html>

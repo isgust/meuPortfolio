@@ -7,6 +7,10 @@ html, body {
     padding: 0;
 }
 
+header{
+height: 10vh;
+}
+
 h3{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -14,7 +18,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 79.5vh;
+    height: 69.5vh;
   }
 
 .custom-container-two{
@@ -28,24 +32,6 @@ h3{
     flex-direction: column;
     align-items: center;
     height: 30vh;
-}
-
-.button{
-    border: none;
-    background-color: #148C3E;
-    width: 36vw;
-    height: 60px;
-    box-shadow: 10px 5px 5px black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-:hover.button{
-    border: none;
-    background-color: #148C3E;
-    width: 36vw;
-    height: 60px;
-    box-shadow: 15px 10px 10px black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 

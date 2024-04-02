@@ -11,17 +11,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="custom-container-three">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <span class="navbar-item">Gustavo Rocha</span>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="{% url 'aboutme' %}" class="navbar-item">Sobre mim</a>
+              <a href="{% url 'projetos' %}" class="navbar-item">Projetos</a>
+              <a href="{% url 'contato'%}" class="navbar-item">Contato</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
   <div class="custom-container mt-6">
     <div class="custom-container-two">
-    <figure class="image is-128x128">
-    <img class="is-rounded" src="{% static 'img/perfil.jpg' %}" alt="">
-    </figure>
-    <h3 class="title mb-6">Gustavo Rocha</h3>
-    </div>
-    <div class="custom-container-three">
-    <button class="button mb-5"><a href="{% url 'aboutme' %}">Sobre mim</a></button>
-    <button class="button mb-5"><a href="{% url 'projetos' %}">Projetos</a></button>
-    <button class="button mb-5"><a href="{% url 'contato'%}">Contato</a></button>
+      <figure class="image is-128x128">
+        <img class="is-rounded" src="{% static 'img/perfil.jpg' %}" alt="">
+      </figure>
+      <h3 class="title mb-6">Gustavo Rocha</h3>
     </div>
   </div>
   <footer class="footer has-background-primary">

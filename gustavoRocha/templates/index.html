@@ -7,17 +7,32 @@
   <title>Gustavo Rocha</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <div>
-  <img src="" alt="">
-  <h3>Gustavo Rocha</h3>
+  <div class="custom-container mt-6">
+    <div class="custom-container-two">
+    <figure class="image is-128x128">
+    <img class="is-rounded" src="{% static 'img/perfil.jpg' %}" alt="">
+    </figure>
+    <h3 class="title mb-6">Gustavo Rocha</h3>
+    </div>
+    <div class="custom-container-three">
+    <button class="button mb-5"><a href="{% url 'aboutme' %}">Sobre mim</a></button>
+    <button class="button mb-5"><a href="{% url 'projetos' %}">Projetos</a></button>
+    <button class="button mb-5"><a href="{% url 'contato'%}">Contato</a></button>
+    </div>
   </div>
-  <section>
-  <button class="button pl-4"><a href="{% url 'index' %}">Home</a></button>
-  <button class="button"><a href="{% url 'projetos' %}">Projetos</a></button>
-  <button class="button"><a href="{% url 'contato'%}">Contato</a></button>
-  <footer class="footer">©Gustavo Rocha - 2024</footer>
-  </section>
+  <footer class="footer has-background-primary">
+    <div class="social-icons mb-4">
+      <a href="https://www.linkedin.com/in/gustavosilvrocha/" class="icon-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/isgust" class="icon-link" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_gutsrocha/" class="icon-link" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5598991939476" class="icon-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:rocha.gustavops@gmail.com" class="icon-link" target="_blank"><i class="fas fa-envelope"></i></a> 
+    </div>  
+    <p>©Gustavo Rocha - 2024</p>
+  </footer>
 </body>
 </html>

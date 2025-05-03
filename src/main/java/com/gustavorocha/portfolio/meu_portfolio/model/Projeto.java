@@ -6,7 +6,6 @@ public class Projeto {
     private String descricaoDetalhada;
     private String tecnologias;
     private String githubUrl;
-    private String videoUrlPreview;
     private String imagemUrlCapa;
     private String urlDetalhe;
 
@@ -54,14 +53,6 @@ public class Projeto {
 
     public void setGithubUrl(String githubUrl) {
         this.githubUrl = githubUrl;
-    }
-
-    public String getVideoUrlPreview() {
-        return videoUrlPreview;
-    }
-
-    public void setVideoUrlPreview(String videoUrlPreview) {
-        this.videoUrlPreview = videoUrlPreview;
     }
 
     public String getImagemUrlCapa() {

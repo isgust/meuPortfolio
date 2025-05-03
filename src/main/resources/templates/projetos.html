@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Meus Projetos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Meus Projetos</h1>
+</header>
+
+<main class="projetos-grid">
+    <div class="projeto-card" th:each="projeto : ${listaProjetos}">
+        <img th:src="${projeto.imagemUrlCapa}" th:alt="${projeto.titulo}">
+        <div class="projeto-info">
+            <h2 th:text="${projeto.titulo}"></h2>
+            <p th:text="${projeto.descricaoBreve}"></p>
+            <a th:href="${projeto.urlDetalhe}">Ver Detalhes</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Gustavo Rocha 2025</p>
+</footer>
+</body>
+</html>

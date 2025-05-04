@@ -6,8 +6,22 @@
 </head>
 <body>
 <header>
-    <h1>Meus Projetos</h1>
+    <nav>
+        <a href="#">Gustavo Rocha</a>
+        <ul>
+            <li><a href="/projetos">Projetos</a></li>
+            <li><a href="/contato">Contato</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="[Seu Link do LinkedIn]" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="[Seu Link do GitHub]" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="[Seu Link do Instagram]" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
 </header>
+
+<h1>Projetos</h1>
+<p>Descrição aleatoria que ainda vou criar para essa pagina</p>
 
 <main class="projetos-grid">
     <div class="projeto-card" th:each="projeto : ${listaProjetos}">

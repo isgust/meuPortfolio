@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gustavo Rocha</title>
+  <title>Sobre Mim - Gustavo Rocha</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/aside.css">
-  <link rel="stylesheet" href="/css/index.css">
-</head>
+  <link rel="stylesheet" href="/css/index.css"> </head>
 <body>
   <aside>
     <div class="logo">
       <a th:href="@{/}"><img src="/images/logo.png" alt="Logo Gustavo Rocha"></a>
     </div>
     <nav>
-      <a th:href="@{/sobre}">Sobre</a>
+      <a th:href="@{/sobre}">Sobre</a> 
       <a th:href="@{/projetos}">Projetos</a>
       <a th:href="@{/contato}">Contato</a>
     </nav>
@@ -30,8 +29,10 @@
   <main class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-12 py-16 gap-x-16">
     <div class="max-w-xl">
       <h1 class="hero-title">Oi,<br>Eu sou Gustavo Rocha,<br>desenvolvedor web</h1>
-      <p class="hero-subtitle">Back End Developer / Java Spring</p>
-      <a th:href="@{/contato}" class="hero-button">Entre em contato</a>
+      <p class="hero-subtitle">
+        Sou de <b>São Luís, Maranhão</b>, e desde os meus 12 anos, sempre fui muito curioso com a web. Minha paixão começou com os cursos de <b>HTML</b> e <b>CSS</b> do professor <b>Gustavo Guanabara</b>. Atualmente, sou acadêmico de <b>Engenharia da Computação</b> e tenho 25 anos, sempre em busca de novos conhecimentos e desafios!
+      </p>
+      <a href="https://www.linkedin.com/in/gustavosilvrocha/" target="_blank" class="hero-button">Conecte-se comigo no LinkedIn</a> 
     </div>
 
     <div class="ilustracao-container mt-10 md:mt-0 ml-0 md:ml-24">

@@ -2,23 +2,30 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #181818;
+    background-color: #181818; 
     color: #fff;
     margin: 0;
     display: flex; 
-    min-height: 100vh;
+    min-height: 100vh; 
     flex-direction: row; 
 }
 
 main {
-    flex-grow: 1;    
-    overflow-y: auto;  
+    flex-grow: 1; 
     display: flex; 
-    flex-direction: row; 
     justify-content: space-between; 
     align-items: center; 
     padding: 1rem 3rem; 
     gap: 4rem; 
+    
+    /* Gradiente sutil, vindo da direita para a esquerda, aplicado APENAS na main */
+    background-image: linear-gradient(to left, 
+                      rgba(130, 10, 209, 0.07) 0%,   
+                      rgba(130, 10, 209, 0.02) 30%,  
+                      rgba(24, 24, 24, 0) 70%,      
+                      rgba(24, 24, 24, 0) 100%      
+                    );
+    background-color: #181818; 
 }
 
 .hero-title {
@@ -52,7 +59,7 @@ main {
 
 .ilustracao-container {
     margin-top: 2.5rem; 
-    margin-right: 15rem;
+    margin-right: 15rem; /* Ajustado via media query para mobile */
     flex-shrink: 0; 
     flex-grow: 0; 
 }
@@ -64,6 +71,25 @@ main {
     border-radius: 1rem;
 }
 
+
+.projeto-card {
+    min-height: 400px; 
+    box-sizing: border-box; 
+}
+
+.projeto-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: center; /
+}
+
+
+
+
+/* Ajuste para telas entre ~768px e 1473px */
 @media(max-width:1473px){
     .ilustracao-container{
         margin-right: 0;
@@ -71,25 +97,24 @@ main {
     }
 
     main{
-        gap: 2rem;
+        gap: 2rem; 
     }
 }
 
-
-/* === Regras para telas menores (mobile) === */
+/* Regras para telas pequenas (mobile, <= 720px) */
 @media (max-width: 720px) { 
     body {
-        flex-direction: column; 
+        flex-direction: column; /* aside e main empilhados em mobile */
     }
 
     main {
         margin-left: 0; 
-        width: 100%; 
+        width: 100%; /* Main ocupa toda a largura em mobile */
         padding-left: 1rem; 
         padding-right: 1rem; 
         padding-top: 2rem; 
         padding-bottom: 2rem;
-        flex-direction: column; 
+        flex-direction: column; /* Conteúdo da main empilhado em mobile */
         align-items: center; 
     }
     
@@ -97,16 +122,15 @@ main {
         width: 100%; 
         text-align: center; 
         margin-top: 0; 
-        order: 2; 
+        order: 2; /* Move a ilustração para baixo em mobile */
 
         display: flex; 
         justify-content: center; 
 
         flex-shrink: initial; 
         flex-grow: initial; 
-        margin-right: 0 !important; /* IMPORTANTE: ZERA A MARGEM PARA MOBILE */
+        margin-right: 0 !important; 
     }
-
 
     .ilustracao-container img {
         max-width: 250px; 
@@ -127,7 +151,7 @@ main {
     }
 
     .hero-button {
-        display: block;
+        display: block; /* Botão ocupa a largura total para melhor toque em mobile */
         margin-left: auto;
         margin-right: auto;
     }

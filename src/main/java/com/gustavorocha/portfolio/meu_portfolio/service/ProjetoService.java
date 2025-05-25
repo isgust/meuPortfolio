@@ -12,17 +12,17 @@ public class ProjetoService {
         List<Projeto> projetos = new ArrayList<>();
         //Projetos
         Projeto projeto = new Projeto();
-        projeto.setTitulo("Projeto Incrível 1");
-        projeto.setDescricaoBreve("Um projeto web inovador.");
-        projeto.setImagemUrlCapa("https://placehold.co/1200x800/8a2be2/ffffff=Projeto+1+Capa");
-        projeto.setUrlDetalhe("/projetos/projeto-incrivel-1");
+        projeto.setTitulo("Projeto de Portfolio");
+        projeto.setDescricaoBreve("Iniciando estudo Spring com meu portfolio.");
+        projeto.setImagemUrlCapa("/images/projeto.png");
+        projeto.setUrlDetalhe("https://github.com/isgust/meuPortfolio");
         projetos.add(projeto);
 
         Projeto projeto2 = new Projeto();
-        projeto2.setTitulo("Aplicação Mobile Fantástica");
-        projeto2.setDescricaoBreve("Um app para revolucionar o mundo.");
-        projeto2.setImagemUrlCapa("https://placehold.co/1200x800/4682b4/ffffff=Projeto+2+Capa");
-        projeto2.setUrlDetalhe("/projetos/app-fantastico");
+        projeto2.setTitulo("Cotação Rápida de Produtos(Em desenvolvimento)");
+        projeto2.setDescricaoBreve("Aplicativo mobile que escaneia códigos de barras e totaliza o valor dos produtos, ideal para compras.");
+        projeto2.setImagemUrlCapa("/images/appCompra.png");
+        projeto2.setUrlDetalhe("/images/appCompra");
         projetos.add(projeto2);
 
         return projetos;

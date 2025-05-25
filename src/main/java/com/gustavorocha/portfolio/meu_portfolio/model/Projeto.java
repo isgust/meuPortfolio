@@ -70,5 +70,9 @@ public class Projeto {
     public void setUrlDetalhe(String urlDetalhe) {
         this.urlDetalhe = urlDetalhe;
     }
+    public void add(Projeto projeto3) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
     
 }

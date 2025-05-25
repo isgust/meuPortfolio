@@ -64,11 +64,17 @@ main {
     border-radius: 1rem;
 }
 
-@media(max-width:1227px){
+@media(max-width:1473px){
     .ilustracao-container{
         margin-right: 0;
+        margin-left: 0;
+    }
+
+    main{
+        gap: 2rem;
     }
 }
+
 
 /* === Regras para telas menores (mobile) === */
 @media (max-width: 720px) { 

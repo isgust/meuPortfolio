@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const aside = document.querySelector('aside');
-    const breakpoint = 1094; //
+    const breakpoint = 936; //
 
     function toggleAsideVisibility() {
         if (window.innerWidth <= breakpoint) {

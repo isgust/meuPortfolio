@@ -64,9 +64,14 @@ main {
     border-radius: 1rem;
 }
 
+@media(max-width:1227px){
+    .ilustracao-container{
+        margin-right: 0;
+    }
+}
 
 /* === Regras para telas menores (mobile) === */
-@media (max-width: 992px) { 
+@media (max-width: 720px) { 
     body {
         flex-direction: column; 
     }
@@ -85,7 +90,7 @@ main {
     .ilustracao-container {
         width: 100%; 
         text-align: center; 
-        margin-top: 2rem; 
+        margin-top: 0; 
         order: 2; 
 
         display: flex; 

@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function setActiveNavLink() {
+        const currentPath = window.location.pathname; 
+        const navLinks = document.querySelectorAll('nav a'); 
+        navLinks.forEach(link => {
+            link.classList.remove('active-link'); 
+            const linkHref = link.getAttribute('href'); 
+            
+            if (linkHref) { 
+                const normalizedLinkPath = linkHref.replace(/\/$/, ''); 
+                const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+
+                if (normalizedLinkPath === normalizedCurrentPath || 
+                    (normalizedLinkPath === '/' && normalizedCurrentPath === '')) {
+                    link.classList.add('active-link'); 
+                }
+            }
+        });
+    }
 
     function handleResponsiveness() { 
         if (window.innerWidth <= breakpointAside) { // Se a tela é mobile
@@ -107,6 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // Chamadas iniciais e event listeners globais:
+    setActiveNavLink(); 
     handleResponsiveness(); 
     window.addEventListener('resize', handleResponsiveness); 
 });

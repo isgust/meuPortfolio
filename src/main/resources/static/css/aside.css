@@ -42,6 +42,11 @@ nav a:hover {
   color: #820ad1; 
 } 
 
+nav a.active-link {
+  color: #820ad1; /* Mesma cor do hover para o item ativo */
+}
+
+
 .social-links { 
   display: flex; 
   gap: 0.5rem; 

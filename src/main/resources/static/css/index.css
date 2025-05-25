@@ -1,51 +1,123 @@
-/* Utilizei o mesmo padrão de CSS para todas as paginas*/
+/* index.css */
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #181818;
-  color: #fff;
-  margin: 0;
-  display: flex;
-  min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181818;
+    color: #fff;
+    margin: 0;
+    display: flex; 
+    min-height: 100vh;
+    flex-direction: row; 
 }
 
 main {
-  flex-grow: 1;        
-  overflow-y: auto;    
+    flex-grow: 1;    
+    overflow-y: auto;  
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 3rem; 
+    gap: 4rem; 
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-subtitle {
-  color: #ddd;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .hero-button {
-  background-color: transparent;
-  color: #820ad1;
-  border: 2px solid #820ad1;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    color: #820ad1;
+    border: 2px solid #820ad1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .hero-button:hover {
-  background-color: #820ad1;
-  color: #fff;
+    background-color: #820ad1;
+    color: #fff;
+}
+
+.ilustracao-container {
+    margin-top: 2.5rem; 
+    margin-right: 15rem;
+    flex-shrink: 0; 
+    flex-grow: 0; 
 }
 
 .ilustracao-container img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
+    max-width: 350px; 
+    width: 100%; 
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+/* === Regras para telas menores (mobile) === */
+@media (max-width: 992px) { 
+    body {
+        flex-direction: column; 
+    }
+
+    main {
+        margin-left: 0; 
+        width: 100%; 
+        padding-left: 1rem; 
+        padding-right: 1rem; 
+        padding-top: 2rem; 
+        padding-bottom: 2rem;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .ilustracao-container {
+        width: 100%; 
+        text-align: center; 
+        margin-top: 2rem; 
+        order: 2; 
+
+        display: flex; 
+        justify-content: center; 
+
+        flex-shrink: initial; 
+        flex-grow: initial; 
+        margin-right: 0 !important; /* IMPORTANTE: ZERA A MARGEM PARA MOBILE */
+    }
+
+
+    .ilustracao-container img {
+        max-width: 250px; 
+        width: 100%; 
+        height: auto;
+    }
+
+    .hero-title, .hero-subtitle {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

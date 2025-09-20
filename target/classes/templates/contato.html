@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contato - Gustavo Rocha</title> 
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/index.css">  
+  <link rel="stylesheet" href="/css/aside.css">  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+<body>
+  <button class="hamburger-menu" id="hamburger-button">
+        <i class="fas fa-bars"></i>
+  </button>
+  <aside>
+    <div class="logo">
+      <a th:href="@{/}"><img src="/images/logo.png" alt="Logo Gustavo Rocha"></a>
+    </div>
+    <nav>
+      <a th:href="@{/sobre}">Sobre</a>
+      <a th:href="@{/projetos}">Projetos</a>
+      <a th:href="@{/contato}">Contato</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/gustavosilvrocha/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/isgust" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_gutsrocha/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </aside>
+
+  <main class="flex justify-between items-center px-12 py-16 gap-x-16">
+    <div class="max-w-xl">
+      <h1 class="hero-title">Entre em contato</h1> <p class="hero-subtitle">Preencha o formulário e providenciarei o que você precisa.</p> <div id="my-form-status" class="mb-4 text-center"></div> <form id="contactForm" action="https://formspree.io/f/mrbqpjlj" method="POST" class="mt-4"> <div class="mb-4">
+          <label for="nome" class="block text-gray-300 text-sm font-bold mb-2">Nome:</label>
+          <input type="text" id="nome" name="nome" required
+                 class="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+          <input type="email" id="email" name="email" required
+                 class="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800" />
+        </div>
+        <div class="mb-6">
+          <label for="mensagem" class="block text-gray-300 text-sm font-bold mb-2">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required
+                    class="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800"></textarea>
+        </div>
+        <button type="submit" class="hero-button">Enviar Mensagem</button> </form>
+    </div>
+
+    <div class="ilustracao-container mt-10 md:mt-0 ml-0 md:ml-24">
+      <img src="/images/contatoicon.png" alt="Ilustração de Contato">
+      </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("my-form-status");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const data = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            status.textContent = "Obrigado pela sua mensagem!";
+            status.style.color = "#0f0";
+            form.reset();
+          } else {
+            status.textContent = "Houve um problema ao enviar o formulário.";
+            status.style.color = "#f00";
+          }
+        } catch (error) {
+          status.textContent = "Erro ao enviar. Verifique sua conexão.";
+          status.style.color = "#f00";
+        }
+      });
+    });
+  </script>
+  <script src="/js/mobile-aside.js"></script> </body>
+</body>
+</html>

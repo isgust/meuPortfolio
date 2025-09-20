@@ -1,0 +1,111 @@
+/* aside.css */ 
+aside { 
+  background-color: #222; 
+  padding: 2rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 200px; 
+  flex-shrink: 0; 
+  height: 100vh; 
+
+} 
+
+
+aside.aside-open { 
+    display: flex !important; /* Força a exibição quando a classe for adicionada */ 
+} 
+
+
+.logo img { 
+  max-width: 100px; 
+  margin-bottom: 2rem; 
+} 
+
+nav { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  margin-bottom: auto; 
+  width: 100%; 
+  align-items: center; 
+} 
+
+nav a { 
+  color: #ddd; 
+  text-decoration: none; 
+  padding: 0.5rem 0; 
+  transition: color 0.2s ease-in-out; 
+} 
+
+nav a:hover { 
+  color: #820ad1; 
+} 
+
+nav a.active-link {
+  color: #820ad1; /* Mesma cor do hover para o item ativo */
+}
+
+
+.social-links { 
+  display: flex; 
+  gap: 0.5rem; 
+  margin-top: 2rem; 
+} 
+
+.social-links a { 
+  color: #ddd; 
+  font-size: 1.2rem; 
+  transition: color 0.2s ease-in-out; 
+} 
+
+.social-links a:hover { 
+  color: #820ad1; 
+} 
+
+/* NOVOS ESTILOS PARA O BOTÃO DO HAMBURGUER */ 
+.hamburger-menu { 
+  display: none; /* Esconde o hambúrguer por padrão (desktop) */ 
+  position: absolute;  
+  top: 1rem; 
+  left: 1rem; 
+  z-index: 1001; /* Fica acima de tudo */ 
+  background-color: #820ad1; 
+  color: #fff; 
+  border: none; 
+  border-radius: 4px; 
+  padding: 0.5rem 0.75rem; 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  transition: background-color 0.2s ease-in-out; 
+} 
+
+.hamburger-menu:hover { 
+  background-color: #9c2bdc; 
+} 
+
+/* MEDIA QUERIES */ 
+
+
+/* Mostra o botão do hambúrguer e configura o aside para mobile */ 
+@media (max-width: 930px) { 
+    .hamburger-menu { 
+        display: block; /* Mostra o botão do hambúrguer em mobile */ 
+    } 
+
+    aside{ 
+      width: 100%;   
+      align-items: center !important; 
+    }  
+} 
+
+@media (min-width: 937px) { 
+    aside { 
+        position: static; 
+        left: 0; 
+        display: flex; 
+    } 
+    .hamburger-menu { 
+        display: none; 
+    } 
+}

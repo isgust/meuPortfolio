@@ -1,0 +1,7 @@
+com\gustavorocha\portfolio\meu_portfolio\model\Projeto.class
+com\gustavorocha\portfolio\meu_portfolio\service\ProjetoService.class
+com\gustavorocha\portfolio\meu_portfolio\controller\ContatoController.class
+com\gustavorocha\portfolio\meu_portfolio\controller\ProjetoController.class
+com\gustavorocha\portfolio\meu_portfolio\controller\SobreController.class
+com\gustavorocha\portfolio\meu_portfolio\controller\HomeController.class
+com\gustavorocha\portfolio\meu_portfolio\MeuPortfolioApplication.class

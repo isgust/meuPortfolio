@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gustavorocha.portfolio.meu_portfolio.MeuPortfolioApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.246 s -- in com.gustavorocha.portfolio.meu_portfolio.MeuPortfolioApplicationTests
